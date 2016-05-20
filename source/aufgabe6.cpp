@@ -41,7 +41,7 @@ TEST_CASE("describe_factorial", "[aufgabe3]")
 	v0.push_back(e);
 	v0.push_back(f);
 
-	auto v1 = v0;
+	auto lol = v0;
 
 	std::sort(std::begin(v0), std::end(v0));
 
@@ -51,11 +51,27 @@ TEST_CASE("describe_factorial", "[aufgabe3]")
 	swaps(a, b);
 	REQUIRE(b.radius()== 3.0f);
 
-	std::sort(v1.begin(), v1.end(), [](Circle a, Circle b) { return a.radius() < b.radius(); } );
+	std::sort(lol.begin(), lol.end(), [](Circle a, Circle b) 
+		{ return a.radius() < b.radius(); } );
 	
-	REQUIRE(std::is_sorted(v1.begin(), v1.end()));
+	REQUIRE(std::is_sorted(lol.begin(), lol.end()));
+
+	
+	//3.10
+	std::vector<int>v1{1,2,3,4,5,6,7,8,9};
+	std::vector<int>v2{9,8,7,6,5,4,3,2,1};
+	std::vector<int>v3(9);
+
+	std::transform(std::begin(v1), std::end(v1), std::begin(v2), std::begin(v3), 
+	    [] (int const& v1, int const& v2) {
+	      return v1 + v2;
+	    });
+
+  	REQUIRE (std::all_of(std::begin(v3), std::end(v3), []
+    	(int const& v3) { return v3==10;}) == true);
 
 
+  	
 }
 
 
