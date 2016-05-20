@@ -2,24 +2,17 @@
 #include <catch.hpp>
 #include <cmath>
 #include <algorithm>
+#include <vector>
 
 
 bool is_even(int a)
 {
-	if (a % 2 == 0)
-	{
-		return true;
-	}
-	return false;
+	return (a % 2 == 0);
 }
-
+	
 bool is_odd(int a)
 {
-	if (a % 2 != 0)
-	{
-		return true;
-	}
-	return false;
+	return (a % 2 != 0);
 }	
 
 
@@ -31,6 +24,8 @@ TEST_CASE("describe_factorial", "[aufgabe3]")
 	{
     	*it=std::rand() % 100 + 0;
 	}
+
+	
 
 
 	v0.erase(std::remove_if(v0.begin(), v0.end(), is_odd), v0.end());

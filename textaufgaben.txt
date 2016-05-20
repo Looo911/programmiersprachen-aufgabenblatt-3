@@ -1,0 +1,9 @@
+Bei den sequentiellen Containern sind deren Elemente als lineare Folge angeordnet. Hierzu gehören dynamische Arrays (vector), Verknüpfte Listen (list) oder auch eine Queue "mit zwei Enden" (deque). Das bedeutet, dass eine deque als Sequenz dahingehend optimiert ist, dass die Operationen an beiden Enden so effizient wie bei Listen sind.
+-->druckaufträge
+
+
+Letztendlich haben die Elemente von assoziativen Containern einen Schlüsselwert und sind in einem Binärbaum sortiert. Dazu gehören u.a. Bäume (set), die Sequenz von Schlüssel-/Werte-Paaren (map) oder auch Bitmengen (bitset).
+--> polygon // farben
+
+
+map[rot] = color(1 , 0 , 0)
