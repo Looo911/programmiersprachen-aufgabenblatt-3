@@ -16,6 +16,31 @@ template <class T> void swaps (T& a, T& b)
 } 
 
 
+template <typename conta, typename funct> 
+conta filter (conta& a, funct& b)
+{
+	conta c;
+	for (auto i : c)
+	{
+		if (b(i))
+			{
+				c.push_back(i);
+			}
+	}
+	return c;
+} 
+
+
+bool is_even(int a)
+{
+	return (a % 2 == 0);
+}
+
+	
+bool is_odd(int a)
+{
+	return (a % 2 != 0);
+}	
 
 
 TEST_CASE("describe_factorial", "[aufgabe3]")
@@ -71,7 +96,25 @@ TEST_CASE("describe_factorial", "[aufgabe3]")
     	(int const& v3) { return v3==10;}) == true);
 
 
-  	
+  	//3.11
+
+
+  	std::vector<int>notalleven{1,2,3,4,5,6};
+
+
+	std::vector<int>alleven=filter(notalleven,is_even);
+
+	REQUIRE(std::all_of(alleven.begin(), alleven.end(), is_even));
+
+
+	//3.13
+/*
+	std::vector<Circle>circles{{5.0f},{3.0f},{8.0f},{1.0f},{5.0f}};
+	auto goil = std::copy_if (circles.begin(), circles.end(), [](Circle a){return (a.radius()<4.0f);} );
+ */	
+
+
+
 }
 
 

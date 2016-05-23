@@ -16,6 +16,12 @@ Circle::Circle(Vec2 const& ctr, float r) :
     radius_{r}
     {}
 
+Circle::Circle(float r) :
+    center_{Vec2()},
+    radius_{r}
+    {}
+
+
 
 void Circle::radius(float r) 
 {radius_=r;}

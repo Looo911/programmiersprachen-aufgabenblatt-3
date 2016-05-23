@@ -7,3 +7,6 @@ Letztendlich haben die Elemente von assoziativen Containern einen Schlüsselwert
 
 
 map[rot] = color(1 , 0 , 0)
+
+3.12
+das Problem ist, dass in dieser form nur die Matrikelnummer, also der int übergeben wird. mit find.

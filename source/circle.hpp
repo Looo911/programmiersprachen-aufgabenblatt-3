@@ -11,6 +11,7 @@ class Circle
   public:
     Circle();
     Circle(Vec2 const& ctr, float r);
+    Circle(float r);
 
     
 
